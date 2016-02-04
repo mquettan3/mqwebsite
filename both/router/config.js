@@ -6,7 +6,7 @@ FlowRouter.notFound = {
 
 if (Meteor.isClient) {
     Tracker.autorun(() => {
-        if (!Meteor.userId() && FlowRouter.current().route) {
+        if (FlowRouter.current().route) {
             FlowRouter.go('landingPage');
         }
     });
