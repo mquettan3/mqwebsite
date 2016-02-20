@@ -6,35 +6,34 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="page-scroll" href="#page-top">Home</a></li>
-                        <li><a class="page-scroll" href="#features">About Us</a></li>
-                        <li><a class="page-scroll" href="#contact">Connect With Us</a></li>
+                        <li><a class="page-scroll" href="#features">About Me</a></li>
+                        <li><a class="page-scroll" href="#contact">Contact Me</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
     <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
-        <ol class="carousel-indicators">
+        <!--<ol class="carousel-indicators">
             <li data-target="#inSlider" data-slide-to="0" class="active"></li>
             <li data-target="#inSlider" data-slide-to="1"></li>
-        </ol>
+        </ol>-->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>We are <span style = "color: #ff6c00">RH</span>Gaming<br/>
-                            We play games<br/>
-                            Learn about us<br/>
-                            And connect with us</h1>
-                        <p>Learn about our platform and get started!</p>
+                        <h1>My Name is <br/><span style = "color: #002caa">Marcus Quettan</span><br/>
+                            Welcome!<br/></h1>
+                        <p>browse to learn more about my services</p>
                         <p>
-                            <a class="btn btn-lg btn-primary page-scroll" href="#features" role="button">READ MORE</a>
-                            <a class="btn btn-lg btn-primary" href="#" role="button">Apply Now</a>
+                            <a class="btn btn-lg btn-primary page-scroll" href="#features" role="button">hire me!</a>
                         </p>
                     </div>
+                    <!--
                     <div class="carousel-image wow zoomIn">
                         <img src="img/landing/logo.png" alt="laptop"/>
                     </div>
+                    -->
                 </div>
                 <!-- Set background for slide in css -->
                 <div class="header-back one"></div>
@@ -70,24 +69,24 @@
     <section id="features" class="container services">
         <div class="row">
             <div class="col-sm-3">
-                <h2>Full responsive</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+                <h2>Embedded Development</h2>
+                <p>I have had a long career in embedded development using C/C++ on single board computers running real time operating systems such as Green Hills Integrity 178 and LynxOS-178.  Have a cool idea?  Need a consultant/contract hire?  Let me help you!</p>
+                <p><a class="navy-link page-scroll" href="#features" role="button">Details &raquo;</a></p>
             </div>
             <div class="col-sm-3">
-                <h2>LESS/SASS Files</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+                <h2>Web Development</h2>
+                <p>Need a responsive modern website?  I will create your web presence using modern programing practices to create a dynamic web page which looks great in full hd and on your phone!</p>
+                <p><a class="navy-link page-scroll" href="#features" role="button">Details &raquo;</a></p>
             </div>
             <div class="col-sm-3">
-                <h2>6 Charts Library</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+                <h2>Voice Overs</h2>
+                <p>Let me be the voice to your brand.  Follow the link to listen to my demonstrations.  If you like what you hear, let me know!</p>
+                <p><a class="navy-link page-scroll" href="#features" role="button">Details &raquo;</a></p>
             </div>
             <div class="col-sm-3">
-                <h2>Advanced Forms</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-                <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
+                <h2>Photography</h2>
+                <p>To be cliche, a picture is worth 1000 words.  It has been a passion of mine to be able to express my creativity through photography and I would love to be your photographer.</p>
+                <p><a class="navy-link page-scroll" href="#features" role="button">Details &raquo;</a></p>
             </div>
         </div>
     </section>
@@ -161,10 +160,10 @@
             <div class="row m-b-lg">
                 <div class="col-lg-3 col-lg-offset-3">
                     <address>
-                        <strong><span class="navy">Company name, Inc.</span></strong><br/>
+                        <strong><span class="navy">MQ Productions, Inc.</span></strong><br/>
                         795 Folsom Ave, Suite 600<br/>
                         San Francisco, CA 94107<br/>
-                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                        <abbr title="Phone">P:</abbr> (770) 364-5515
                     </address>
                 </div>
                 <div class="col-lg-4">
@@ -196,13 +195,4 @@
             </div>
         </div>
     </section>
-    {{#if openModal}}
-        {{#with modalData}}
-            {{> authModal formType=modalData}}
-        {{/with}}
-    {{/if}}
-
-
-
-
 </template>
