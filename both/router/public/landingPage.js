@@ -7,6 +7,6 @@ const publicRoutes = FlowRouter.group({name: 'public', triggersEnter: [publicRed
 publicRoutes.route('/', {
     name: 'landingPage',
     action() {
-        BlazeLayout.render('blankLayout', {main: 'landing' });
+        BlazeLayout.render('landingLayout');
     }
 });

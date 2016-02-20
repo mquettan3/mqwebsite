@@ -1,11 +1,11 @@
-Template.blankLayout.rendered = function(){
+Template.landingLayout.rendered = function(){
 
     // Add gray color for background in blank layout
     $('body').addClass('gray-bg');
 
 }
 
-Template.blankLayout.destroyed = function(){
+Template.landingLayout.destroyed = function(){
 
     // Remove special color for blank layout
     $('body').removeClass('gray-bg');
