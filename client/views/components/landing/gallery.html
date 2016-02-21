@@ -1,0 +1,37 @@
+<template name="gallery">
+  <div class="content">
+    <div class="row m-b-lg" style="margin-bottom: 0px">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+            <h1>Image gallery</h1>
+            <p>Click/tap to view larger.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="hpanel">
+                <div class="panel-body">
+                    <div class="lightBoxGallery">
+                        <a href="img/landing/Me_GrandTurk_Shades.jpg" title="First Image" data-gallery=""><img src="img/landing/Me_GrandTurk_Shades_Small.jpg"></a>
+                        <a href="img/landing/Me_CruiseShip_Shades.jpg" title="Second Image" data-gallery=""><img src="img/landing/Me_CruiseShip_Shades_Small.jpg"></a>
+                    </div>
+                </div>
+                <div class="text-center panel-footer">
+                    <i class="fa fa-picture-o"> </i> 2 images
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+  <div id="blueimp-gallery" class="blueimp-gallery">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
+  </div>
+</template>

@@ -1,3 +1,7 @@
+let landing_dynamics_destroyed = () => {
+    $('body').removeClass('landing-page');
+}
+
 let landing_dynamics_onRendered = () => {
     ////////////////////////////////////////////////
     // THIS BLOCK OF CODE ADDS INSPINIAS FUNCTIONALITY TO LANDING PAGE
@@ -60,3 +64,4 @@ let landing_dynamics_onRendered = () => {
 };
 
 Modules.client.landing_dynamics_onRendered = landing_dynamics_onRendered;
+Modules.client.landing_dynamics_destroyed = landing_dynamics_destroyed;
