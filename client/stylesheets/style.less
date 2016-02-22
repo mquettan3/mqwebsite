@@ -13,7 +13,6 @@
 
 // Variables, Mixins
 @import "globals/variables.import.less";
-@import "globals/mixins.import.less";
 
 // INSPINIA Theme Elements
 @import "globals/typography.import.less";
@@ -31,28 +30,19 @@
 @import "globals/datepicker3.import.less";
 @import "globals/jquery.steps.import.less";
 
-// Landing page
+// INSPINIA Landing page
 @import "globals/landing.import.less";
-
-//Carousel
-@import "components/carousel.import.less";
-
-// RTL Support
-@import "globals/rtl.import.less";
-
-// For demo only - config box style
-@import "globals/theme-config.import.less";
 
 // INSPINIA Skins
 @import "globals/skins.import.less";
 @import "globals/md-skin.import.less";
 
-// Media query style
-@import "globals/media.import.less";
+// Global Custom styles
+@import "custom/global.import.less";
 
-// Custom style
-// Your custom style to override base style
-@import "globals/custom.import.less";
+// Component Specific Customs
+// Carousel
+@import "custom/components/carousel.import.less";
 
 // Clear layout on print mode
 @media print {
