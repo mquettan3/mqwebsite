@@ -1,0 +1,194 @@
+/*-------------------------------------------------------------------------------------------*/
+/* HEADER     ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/
+
+/* Header Style   ||-------------------*/
+.header {
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    z-index: 1000;
+    color: #fff;
+    width: 100%;
+    height: 120px;
+    background: transparent;
+    transition: background-color 200ms ease-in-out 0s;
+    -o-transition: background-color 200ms ease-in-out 0s;
+    -moz-transition: background-color 200ms ease-in-out 0s;
+    -webkit-transition: background-color 200ms ease-in-out 0s;
+    transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+    .header.header-prepare {
+        background-color: rgba(51, 51, 51, 0.90);
+    }
+
+    .header.header-fixed {
+        display: block;
+        margin-top: 0 !important;
+        position: fixed;
+        height: 65px;
+    }
+
+.header-inner {
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+}
+
+.header-fixed .logo a {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 160px;
+    transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+.header-fixed .nav-menu ul.nav-menu-inner li a {
+    padding: 26px 12px;
+}
+
+@media all and (max-width: 1024px) {
+    .header {
+        height: 65px;
+    }
+
+        .header .logo a {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            width: 160px;
+            transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+        }
+}
+
+/* Logo Style   ||-------------------*/
+.logo {
+    float: left;
+    text-align: left;
+    display: inline-block;
+}
+
+    .logo a {
+        width: 180px;
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+    }
+
+        .logo a img {
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+        }
+
+
+
+/* Navigation Menu Style  ||-------------------*/
+.nav-menu {
+    position: static;
+    float: right;
+    display: block;
+}
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul.nav-menu-inner {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        .nav-menu ul.nav-menu-inner li {
+            display: inline-block;
+            list-style: none;
+            text-align: center;
+            transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+        }
+
+            .nav-menu ul.nav-menu-inner li a {
+                display: block;
+                color: #fff;
+                font-size: 13px;
+                line-height: 1;
+                padding: 43px 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-family: "Raleway",sans-serif;
+                transition: all 0.3s ease 0s;
+                -o-transition: all 0.3s ease 0s;
+                -moz-transition: all 0.3s ease 0s;
+                -webkit-transition: all 0.3s ease 0s;
+            }
+
+.nav-menu-icon {
+    display: none;
+    float: right;
+}
+
+    .nav-menu-icon a {
+        color: #fff;
+        display: block;
+        font-size: 17px;
+        padding: 19px 0;
+    }
+
+        .nav-menu-icon.active a, .nav-menu-icon a.active,
+        .nav-menu-icon:hover a, .nav-menu-icon a:hover,
+        .nav-menu ul.nav-menu-inner li.active a,
+        .nav-menu ul.nav-menu-inner li a.active,
+        .nav-menu ul.nav-menu-inner li:hover a,
+        .nav-menu ul.nav-menu-inner li a:hover,
+        .header-fixed .nav-menu ul.nav-menu-inner li a.current,
+        .header-fixed .nav-menu ul.nav-menu-inner li.current a {
+            color: #c7a674;
+        }
+
+@media all and (max-width: 1024px) {
+    .nav-menu ul.nav-menu-inner li {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        float: none;
+        display: block;
+        width: 100%;
+        background: #333;
+        overflow-y: auto;
+        display: none;
+        z-index: 999;
+    }
+
+    .nav-menu-icon, .header-fixed .nav-menu-icon {
+        display: inline-block;
+        float: right;
+    }
+
+    .nav-menu ul.nav-menu-inner li a, .header-fixed .nav-menu ul.nav-menu-inner li a {
+        padding: 20px 12px;
+        border-top: 1px solid #444;
+    }
+}

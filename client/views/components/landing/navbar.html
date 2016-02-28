@@ -1,17 +1,33 @@
 <template name="navbar">
 
-    <div class="navbar-wrapper">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a class="page-scroll" href="#page-top">Home</a></li>
-                        <li><a class="page-scroll" href="#features">About Me</a></li>
-                        <li><a class="page-scroll" href="#contact">Contact Me</a></li>
-                    </ul>
-                </div>
+    <!-- Header -->
+    <div id="header" class="header navbar-fixed-top">
+        <div class="header-inner">
+            <!-- Logo -->
+            <div class="logo">
+                <a class="page-scroll" href="#inSlider">
+                    <img src="img/landing/logo-light.png" />
+                </a>
             </div>
-        </nav>
+            <!-- End Logo -->
+
+            <!--Navigation Icon-->
+            <div class="nav-menu-icon">
+                <a><i class="fa fa-bars"></i></a>
+            </div>
+            <!--End Navigation Icon-->
+
+            <!-- Navigation Menu -->
+            <div class="nav navbar-nav nav-menu">
+                <ul class="nav-menu-inner">
+                    <li><a class="page-scroll" href="#inSlider">Home</a></li>
+                    <li><a class="page-scroll" href="#features">About Me</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+            <!-- End Navigation Menu -->
+        </div>
     </div>
+    <!-- End Header -->
 
 </template>
