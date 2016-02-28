@@ -6,6 +6,9 @@ Template.navbar.onCreated(function () {
   var addPrepareHeaderOn = 200;
   var docElem = document.documentElement;
 
+  // Mobile menu max height
+  //$(".nav-menu").css("max-height", $(window).height() - 65 + "px");
+
   window.addEventListener('scroll', function (event) {
       if (!handledScroll) {
           handledScroll = true;
@@ -22,7 +25,7 @@ Template.navbar.onCreated(function () {
       $(".header").removeClass('header-fixed');
     }
 
-    if ( sy > addPrepareHeaderOn ) {
+    if ( sy > addFixedHeaderOn ) {
       $(".header").addClass('header-prepare');
     }
     else {
@@ -39,8 +42,16 @@ Template.navbar.onCreated(function () {
 
 });
 
-Template.navbar.events({
 
+Template.navbar.events({
+  // ----------------------------------------------------------------
+  // Navigation Menu panel
+  // ----------------------------------------------------------------
+  'click.nav-menu-icon': function (event) {
+    $(".nav-menu-icon").toggleClass('active');
+    $(".nav-menu").toggleClass('active');
+    return false;
+  }
 });
 
 Template.navbar.onRendered(function () {
