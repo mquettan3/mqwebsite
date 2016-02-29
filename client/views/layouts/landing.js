@@ -3,6 +3,19 @@ Template.landingLayout.rendered = function(){
     // Add gray color for background in blank layout
     $('body').addClass('gray-bg');
     $('body').addClass('landing-page');
+    var loaded = false;
+
+    //Preloader logic
+    window.onload = function() {
+        if(!loaded) {
+            $('.loader-wrapper').addClass('animated fadeOut');
+            $('.loader-wrapper').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $('.loader-wrapper').remove();
+            })
+            loaded = true;
+        }
+    }();
+    //End Preloader logic
 
     $('body').scrollspy({
         target: '.header-fixed',
