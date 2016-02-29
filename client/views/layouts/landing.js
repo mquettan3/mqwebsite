@@ -8,7 +8,10 @@ Template.landingLayout.rendered = function(){
     //Preloader logic
     window.onload = function() {
         if(!loaded) {
-            $('.loader-wrapper').addClass('animated fadeOut');
+            //Force the pre-loader to exist for at least 1 second.  Anything less is pretty jarring to see.
+            setTimeout(function() {
+                $('.loader-wrapper').addClass('animated fadeOut');
+            }, 1000);
             $('.loader-wrapper').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
                 $('.loader-wrapper').remove();
             })
