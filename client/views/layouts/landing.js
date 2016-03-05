@@ -1,4 +1,6 @@
 Template.landingLayout.rendered = function(){
+    //Initilize WOW animations
+    new WOW().init();
 
     // Add gray color for background in blank layout
     $('body').addClass('gray-bg');
