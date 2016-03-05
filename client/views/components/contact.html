@@ -35,26 +35,29 @@
 						<div class="col-md-6">
 							<div class="contact-footer-content">
 								<h2 class="title">Contact Us</h2>
-								<div class="alert alert-success hidden" id="MessageSent2">
-									We have received your message, we will contact you very soon.
+								<div class="alert alert-success hidden" id="MessageSent">
+									Your message was successfully sent!
+								</div>
+								<div class="alert alert-danger hidden" id="MessageNotSent">
+									Oops! Something went wrong please refresh the page and try again.
 								</div>
 								<div class="alert alert-danger hidden" id="MessageNotSent2">
-									Oops! Something went wrong please refresh the page and try again.
+									Yahoo E-Mail addresses do not cooperate with this form.  Please use a different E-Mail address.
 								</div>
 								<form role="form" id="contact-footer-form" class="margin-clear">
 									<div class="form-group has-feedback mb-10">
 										<label class="sr-only" for="name">Name</label>
-										<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+										<input type="text" class="form-control" id="name" placeholder="Name" name="name" required>
 										<i class="fa fa-user form-control-feedback"></i>
 									</div>
-									<div class="form-group has-feedback mb-10">
+									<div class="form-group has-feedback mb-1">
 										<label class="sr-only" for="email">Email address</label>
-										<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+										<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
 										<i class="fa fa-envelope form-control-feedback"></i>
 									</div>
 									<div class="form-group has-feedback mb-10">
 										<label class="sr-only" for="message">Message</label>
-										<textarea class="message_box form-control" rows="4" id="message" placeholder="Message" name="message"></textarea>
+										<textarea class="message_box form-control" rows="4" id="message" placeholder="Message" name="message" required></textarea>
 										<i class="fa fa-pencil form-control-feedback"></i>
 									</div>
 									<input type="submit" value="Send" class="margin-clear submit-button btn btn-default">
