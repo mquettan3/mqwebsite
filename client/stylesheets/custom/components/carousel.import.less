@@ -2,3 +2,65 @@
     background-attachment: fixed !important;
     background-position: top center;
 }
+
+// Adjust height of navbar for each 4 Chrome cases
+@media all and (height: 1019px) {
+    //No bookmarks bar, no start menu
+    .landing-page .carousel {
+        height: 824px;
+    }
+
+    .landing-page .carousel .item {
+        height: 824px;
+    }
+
+    .landing-page .header-back {
+        height: 820px;
+    }
+}
+
+@media all and (height: 995px) {
+    //Bookmarks Bar, no start menu
+    .landing-page .carousel {
+        height: 800px;
+    }
+
+    .landing-page .carousel .item {
+        height: 800px;
+    }
+
+    .landing-page .header-back {
+        height: 796px;
+    }
+}
+
+@media all and (height: 979px) {
+    //No Bookmarks Bar, start menu
+    .landing-page .carousel {
+        height: 784px;
+    }
+
+    .landing-page .carousel .item {
+        height: 784px;
+    }
+
+    .landing-page .header-back {
+        height: 780px;
+    }
+}
+
+@media all and (height: 955px) {
+    //Bookmarks Bar, start menu
+    .landing-page .carousel {
+        height: 760px;
+    }
+
+    .landing-page .carousel .item {
+        height: 760px;
+    }
+
+    .landing-page .header-back {
+        height: 756px;
+    }
+}
+// End Adjust height of navbar for each 4 Chrome cases

@@ -6,16 +6,13 @@ Template.navbar.onCreated(function () {
   var addPrepareHeaderOn = 200;
   var docElem = document.documentElement;
 
-  // Mobile menu max height
-  //$(".nav-menu").css("max-height", $(window).height() - 65 + "px");
-
   window.addEventListener('scroll', function (event) {
       if (!handledScroll) {
           handledScroll = true;
           handleCurrentScroll();
       }
   }, false);
-
+  
   function handleCurrentScroll() {
     var sy = scrollY();
     if ( sy > addFixedHeaderOn ) {
@@ -53,11 +50,3 @@ Template.navbar.events({
     return false;
   }
 });
-
-Template.navbar.onRendered(function () {
-
-});
-
-Template.navbar.destroyed = function () {
-
-};
