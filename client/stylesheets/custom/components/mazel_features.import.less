@@ -6,8 +6,8 @@
 // Icons
 .icon-top {
   margin-bottom: 30px;
-  background-color: #f5f5f5;
-  display: inline-block !important;
+  background-color: @base-background-color;
+  display: inline-block;
   font-size: 23px;
   color: #333;
   height: 70px;
@@ -24,12 +24,12 @@
 }
 
 .icon-black {
-  background-color: #333;
+  background-color: @dark-background-color;
   color: #fff;
 }
 
 .content-box:hover .icon-black{
-  background-color: #002caa;
+  background-color: @accent-color;
   color: #fff;
 }
 // End icons
@@ -41,7 +41,7 @@
 
 h5.features-title {
   font-size: 14px;
-  color: #333;
+  color: @text-color;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -55,8 +55,8 @@ h5.features-title {
 //Paragraphs
 .features-wrapper p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px !important;
-  color: #666666 !important;
+  font-size: 14px;
+  color: @text-color;
   line-height: 1.6;
   font-weight: 400;
   margin-bottom: 15px;

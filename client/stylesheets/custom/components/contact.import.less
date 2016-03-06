@@ -14,45 +14,45 @@
 
 /////Footer Wrapper
 .dark .contact-footer {
-  background-color: #222222;
+  background-color: @dark-background-color;
 }
 
 .contact-footer {
   font-size: 14px;
   line-height: 1.5;
   padding: 40px 0;
-  background-color: #fafafa;
+  background-color: @base-background-color;
   overflow: auto;
 }
 
 // .contact-footer-inner {
-//   color: #777777 !important;
+//   color: @light-text-color !important;
 // }
 
 .contact-footer-inner p { //This is required to actually get the behavior I want, altough this is stupid, should just be .contact-footer-inner but whatever
-  color: #777777 !important;
+  color: @light-text-color !important;
 }
 /////End Footer Wrapper
 
 ///// Content Wrapper
 .contact-footer-content {
-  color: #777777;
+  color: @light-text-color;
 }
 ///// In-line Contact Information Start
 .contact-footer-content .text-default.fa {
-  color: #09afdf;
+  color: @light-accent-color;
 }
 
 .contact-footer-content .text-default.a {
-  color: #09afdf;
+  color: @light-accent-color;
 }
 
 .link-dark {
-  color: #777777;
+  color: @light-text-color;
 }
 
 .link-dark:hover {
-  color: #777777;
+  color: @light-text-color;
   text-decoration: underline;
 }
 ///// End In-line Contact Information Start
@@ -61,25 +61,25 @@
 /////All Input
 /////All Input Boxes
 .dark .contact-footer-content .form-control {
-  border-color: #222222;
+  border-color: @dark-background-color;
 }
 
 .contact-footer .form-control {
   box-shadow: inset 0 2px 3px rgba(0,0,0,0.6);
-  color: #cccccc;
+  color: @form-text-color;
   border-radius: 5px;
   height: 40px;
   -webkit-appearance: none;
 }
 
 .dark .contact-footer .form-control {
-  background-color: rgba(255,255,255,0.1);
+  background-color: @form-background-color;
 }
 
 .dark .contact-footer .form-control:focus {
-  background-color: rgba(255,255,255,0.15);
+  background-color: @form-background-color-focus;
   outline: 0;
-  border-color: #222222 !important; //Important due to conflict with the INSPINIA .form-control
+  border-color: @dark-background-color !important; //Important due to conflict with the INSPINIA .form-control
 }
 
 //Textarea box only
@@ -93,19 +93,19 @@ textarea.message_box.form-control {
 
 ///// Submit button
 .dark .btn-default {
-  color: #dddddd;
-  background-color: rgba(0,0,0,0.2);
-  border-color: rgba(0,0,0,0.1);
+  color: @form-text-color;
+  background-color: @button-background-color;
+  border-color: @button-border-color;
 }
 
 .dark .btn-default:hover {
-  background-color: rgba(0,0,0,0.35);
-  border-color: rgba(0,0,0,0.2);
+  background-color: @button-background-color-focus;
+  border-color: @button-border-color-focus;
 }
 
 .dark .btn-default:active {
-  background-color: rgba(0,0,0,0.35);
-  border-color: rgba(0,0,0,0.2);
+  background-color: @button-background-color-focus;
+  border-color: @button-border-color-focus;
 }
 
 .btn:focus {
@@ -156,6 +156,31 @@ textarea.message_box.form-control {
   margin-bottom: 25px;
 }
 ///// End Start separator-2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ///// Social Buttons ///// This is the last thing in this file
 
@@ -253,7 +278,7 @@ textarea.message_box.form-control {
 }
 .default.social-links li a:hover {
   background-color: #ffffff;
-  color: #777777;
+  color: @light-text-color;
 }
 .dark .social-links li a {
   background-color: rgba(0, 0, 0, 0.2);
@@ -282,14 +307,14 @@ textarea.message_box.form-control {
   margin: 0 5px 5px 0;
 }
 .contact-footer-content .social-links li a {
-  color: #777777;
+  color: @light-text-color;
   background-color: transparent;
-  border-color: #777777;
+  border-color: @light-text-color;
 }
 .contact-footer-content .social-links li a:hover {
   color: #fff;
-  background-color: #777777;
-  border-color: #777777;
+  background-color: @light-text-color;
+  border-color: @light-text-color;
 }
 .social-links.small li a {
   width: 30px;
@@ -567,3 +592,5 @@ textarea.message_box.form-control {
 .social-links .dropdown-menu li a:hover i {
   color: #ffffff;
 }
+
+///// End Social Buttons /////
