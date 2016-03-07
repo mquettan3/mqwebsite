@@ -23,7 +23,7 @@ Template.landingLayout.rendered = function(){
     //End Preloader logic
 
     $('body').scrollspy({
-        target: '.header-fixed',
+        target: '#header',
         offset: 65
     })
 

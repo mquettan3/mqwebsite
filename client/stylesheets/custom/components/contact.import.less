@@ -15,6 +15,7 @@
 /////Footer Wrapper
 .dark .contact-footer {
   background-color: @dark-background-color;
+  font-family: @body-font;
 }
 
 .contact-footer {
@@ -30,7 +31,7 @@
 // }
 
 .contact-footer-inner p { //This is required to actually get the behavior I want, altough this is stupid, should just be .contact-footer-inner but whatever
-  color: @light-text-color !important;
+  color: @light-text-color;
 }
 /////End Footer Wrapper
 
@@ -79,7 +80,7 @@
 .dark .contact-footer .form-control:focus {
   background-color: @form-background-color-focus;
   outline: 0;
-  border-color: @dark-background-color !important; //Important due to conflict with the INSPINIA .form-control
+  border-color: @dark-background-color; //Important due to conflict with the INSPINIA .form-control
 }
 
 //Textarea box only
@@ -109,7 +110,7 @@ textarea.message_box.form-control {
 }
 
 .btn:focus {
-  outline: 5px auto -webkit-focus-ring-color !important;
+  outline: 5px auto -webkit-focus-ring-color;
   outline-offset:-2px;
 }
 
