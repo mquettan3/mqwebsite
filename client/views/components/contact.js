@@ -1,9 +1,3 @@
-
-Template.contact.onCreated(function () {
-
-});
-
-
 Template.contact.events({
   // ----------------------------------------------------------------
   // Form Submission
@@ -41,11 +35,3 @@ Template.contact.events({
       return false;
   }
 });
-
-Template.contact.onRendered(function () {
-
-});
-
-Template.contact.destroyed = function () {
-
-};

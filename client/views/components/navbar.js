@@ -1,5 +1,3 @@
-
-
 Template.navbar.onCreated(function () {
   var handledScroll = false;
   var addFixedHeaderOn = 1;
@@ -12,7 +10,7 @@ Template.navbar.onCreated(function () {
           handleCurrentScroll();
       }
   }, false);
-  
+
   function handleCurrentScroll() {
     var sy = scrollY();
     if ( sy > addFixedHeaderOn ) {
