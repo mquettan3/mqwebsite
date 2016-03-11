@@ -81,3 +81,84 @@
     }
 }
 // End Adjust height of navbar for each 4 Chrome cases
+
+// Call to action button
+.btn {
+    padding: 7px 20px;
+    font-size: 14px;
+    line-height: 1.46666667;
+    border-radius: 3px;
+    margin: 10px 0;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    //Makes it so the user cannot highlight-select this button
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    //End
+}
+
+.btn-animated {
+    position: relative;
+    min-width: 0!important;
+    padding-right: 45px!important;
+}
+
+.btn-anmiated:after {
+    width: 35px;
+    height: 100%;
+    background-color: @dark-background-color;
+    position: absolute;
+    content: "";
+    top: 0;
+    opacity: 0;
+    right: 0px;
+    z-index: 2;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-dark {
+    color: #ffffff;
+    background-color: #373737;
+    border-color: #333333;
+}
+
+.btn.btn-gray-transparent:hover,
+.btn.btn-gray-transparent:focus,
+.btn.btn-gray-transparent.focus {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: @dark-background-color;
+    border-color: #111111;
+}
+
+pl-20 {
+  padding-left: 20px;
+}
+
+.btn-animated i {
+    z-index: 3;
+    right: 17px;
+    position: absolute;
+    line-height: 34px;
+    top: 0;
+    min-width: 12px;
+    -webkit-transition: right 0.2s ease-in-out;
+    -o-transition: right 0.2s ease-in-out;
+    transition: right 0.2s ease-in-out;
+}
+
+.btn-animated.btn-lg:hover i {
+    right: 10px;
+}
+// End call to action button
