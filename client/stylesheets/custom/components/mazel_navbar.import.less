@@ -40,13 +40,22 @@
 }
 
 .header-fixed .logo a {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 9px;
+    height: 40px;
     width: 160px;
+    font-size : 28px;
     transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
+}
+
+.header-fixed .logo a:hover {
+    text-decoration: none;
+}
+
+.header-fixed .logo a div {
+    text-decoration: none;
 }
 
 .header-fixed .nav-menu ul.nav-menu-inner li a {
@@ -61,11 +70,17 @@
         .header .logo a {
             margin-top: 15px;
             margin-bottom: 15px;
+            font-size: 28px;
             width: 160px;
             transition: all 0.3s ease 0s;
             -o-transition: all 0.3s ease 0s;
-            -moz-transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;  /*you don't need to repeat all this stuff dbizzle*/
             -webkit-transition: all 0.3s ease 0s;
+        }
+
+        .header-fixed .logo a {
+          font-size : 28px;
+          margin-top : 15px;
         }
 }
 
@@ -77,14 +92,22 @@
 }
 
     .logo a {
-        width: 180px;
+        width: 200px;
         display: block;
         margin-top: 30px;
         margin-bottom: 30px;
+        height: 50px;
         transition: all 0.3s ease 0s;
         -o-transition: all 0.3s ease 0s;
         -moz-transition: all 0.3s ease 0s;
         -webkit-transition: all 0.3s ease 0s;
+        font-family: @logo-font;
+        letter-spacing: 1px;
+        font-size : 36px;
+        border: 3px solid #fff;
+        text-align : center;
+        color: #fff;
+        box-sizing: content-box;
     }
 
         .logo a img {
