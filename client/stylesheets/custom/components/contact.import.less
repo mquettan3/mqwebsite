@@ -25,20 +25,22 @@
   background-color: @base-background-color;
   overflow: auto;
 }
-
-// .contact-footer-inner {
-//   color: @light-text-color !important;
-// }
-
-.contact-footer-inner p { //This is required to actually get the behavior I want, altough this is stupid, should just be .contact-footer-inner but whatever
-  color: @light-text-color;
-}
 /////End Footer Wrapper
 
 ///// Content Wrapper
-.contact-footer-content {
+.contact-footer-inner .contact-footer-content,
+.contact-footer-inner .contact-footer-content p
+{
   color: @light-text-color;
 }
+
+.contact-footer-inner .contact-footer-content p,
+.contact-footer-inner .contact-footer-content li
+{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 ///// In-line Contact Information Start
 .contact-footer-content .text-default.fa {
   color: @light-accent-color;
