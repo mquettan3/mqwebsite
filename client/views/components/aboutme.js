@@ -27,16 +27,16 @@ Template.contact.onRendered(function () {
 		$(this).find("span").hide();
 	});
 
+	//I can't figure out how to do this on window load AND do the pre-loader on window load.
 	setTimeout(function() {
 		//Call Meteor Method to check if the progress_bars id is in the viewport.
 		if (Modules.client.element_in_viewport(document.getElementById("progress_bars"))) {
-			console.log("Element started in viewport");
 			//If so, animate the progress bars now!
 			animateProgressBars();
 		} else {
-			console.log("Element NOT in viewport");
 			//If not, check each time we scroll if the progress_bars are in view.
 			$(window).on('scroll.progress_bar_event', scrollHandler);
 		}
 	}, 1000);
+
 });
