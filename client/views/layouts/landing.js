@@ -24,7 +24,7 @@ Template.landingLayout.rendered = function(){
 
     $('body').scrollspy({
         target: '#header',
-        offset: 65
+        offset: 70
     })
 
     // Page scrolling feature
