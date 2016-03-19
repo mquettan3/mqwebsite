@@ -122,15 +122,15 @@
     opacity: 0;
     right: 0px;
     z-index: 2;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
 }
 
 .btn-dark {
     color: #ffffff;
     background-color: #373737;
     border-color: #333333;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn.btn-gray-transparent:hover,
@@ -140,6 +140,9 @@
     text-decoration: none;
     background-color: @dark-background-color;
     border-color: #111111;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 pl-20 {
@@ -153,12 +156,19 @@ pl-20 {
     line-height: 34px;
     top: 0;
     min-width: 12px;
-    -webkit-transition: right 0.2s ease-in-out;
-    -o-transition: right 0.2s ease-in-out;
-    transition: right 0.2s ease-in-out;
 }
 
 .btn-animated.btn-lg:hover i {
-    right: 10px;
+    top: 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-animated.btn-lg i {
+    top: 0px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 // End call to action button

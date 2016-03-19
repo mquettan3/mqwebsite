@@ -1,7 +1,18 @@
-.features-wrapper {
-  padding-top: 67px;
-  padding-bottom: 67px;
+//Header
+#features .gallery-header h1 {
+  color: @lighter-text-color;
 }
+//End Header
+
+//Background Image
+#features {
+  background-image: url(/img/landing/Semiconductor.jpg);
+  background-attachment: fixed;
+}
+.image_overlay {
+  background-color: rgba(0,0,0,0.8);
+}
+//End Background Image
 
 // Icons
 .icon-top {
@@ -24,7 +35,7 @@
 }
 
 .icon-black {
-  background-color: @dark-background-color;
+  background-color: @dark-light-background-color;
   color: #fff;
 }
 
@@ -41,7 +52,7 @@
 
 h5.features-title {
   font-size: 14px;
-  color: @text-color;
+  color: @lighter-text-color;
   text-transform: uppercase;
   font-family: @title-font;
   font-weight: 700;
@@ -53,10 +64,10 @@ h5.features-title {
 //End Headings
 
 //Paragraphs
-.features-wrapper p {
+.features-wrapper.row p {
   font-family: @body-font;
   font-size: 14px;
-  color: @text-color;
+  color: @lighter-text-color;
   line-height: 1.6;
   font-weight: 400;
   margin-bottom: 15px;
