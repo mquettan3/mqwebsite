@@ -1,82 +1,81 @@
-.parallax {
-    background-attachment: fixed !important;
-    background-position: top center;
+//Background image
+.banner {
+    background-color: @accent-color;
 }
+.banner-image {
+    background-image: url('/img/landing/Atlanta_Cityscape.jpg');
+    background-attachment: fixed;
+}
+//End Background Image
 
 // Caption Text Overlay
-.landing-page .carousel-caption {
+.banner-caption {
     font-family: @title-font;
+    vertical-align: center;
     top: 250px;
-    width: 50%;
 }
 
-.landing-page .carousel-caption h1 {
+.banner-caption h1 {
     color: @accent-color;
     font-size: 40px;
 }
 
-.landing-page .carousel-caption p {
+.banner-caption p {
     font-size: 18px;
+    color: #ffffff;
 }
 // End Caption Text Overlay
 
 // Adjust height of navbar for each 4 Chrome cases
+// Default Values
+.banner {
+    height: 824px;
+}
+
+.banner-image {
+    height: 820px;
+}
+
 @media all and (height: 1019px) {
     //No bookmarks bar, no start menu
-    .landing-page .carousel {
+    .banner {
         height: 824px;
     }
 
-    .landing-page .carousel .item {
-        height: 824px;
-    }
-
-    .landing-page .header-back {
+    .banner-image {
         height: 820px;
     }
 }
 
 @media all and (height: 995px) {
     //Bookmarks Bar, no start menu
-    .landing-page .carousel {
+    .banner {
         height: 800px;
     }
 
-    .landing-page .carousel .item {
-        height: 800px;
-    }
-
-    .landing-page .header-back {
+    .banner-image {
         height: 796px;
     }
 }
 
 @media all and (height: 979px) {
     //No Bookmarks Bar, start menu
-    .landing-page .carousel {
+    .banner {
         height: 784px;
     }
 
-    .landing-page .carousel .item {
-        height: 784px;
-    }
-
-    .landing-page .header-back {
+    .banner-image {
         height: 780px;
     }
 }
 
 @media all and (height: 955px) {
     //Bookmarks Bar, start menu
-    .landing-page .carousel {
+    .banner {
         height: 760px;
     }
 
-    .landing-page .carousel .item {
-        height: 760px;
-    }
-
-    .landing-page .header-back {
+    .banner-image {
         height: 756px;
     }
 }
@@ -124,7 +123,8 @@
     z-index: 2;
 }
 
-.btn-dark {
+.btn-dark,
+.btn.btn-gray-transparent:focus {
     color: #ffffff;
     background-color: #373737;
     border-color: #333333;
@@ -134,7 +134,7 @@
 }
 
 .btn.btn-gray-transparent:hover,
-.btn.btn-gray-transparent:focus {
+.btn.btn-gray-transparent:active {
     color: #ffffff;
     text-decoration: none;
     background-color: @dark-background-color;
@@ -157,7 +157,8 @@ pl-20 {
     min-width: 12px;
 }
 
-.btn-animated.btn-lg:hover i {
+.btn-animated.btn-lg:hover i,
+.btn-animated.btn-lg:active i {
     top: 5px;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
