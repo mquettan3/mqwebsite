@@ -1,0 +1,21 @@
+<template name="rockPaperScissors">
+    <!-- Root -->
+    <div class="row">
+    	<div class="col-lg-12">
+    		<h5>Games</h5>
+    		{{#each game in current_game}}
+				<p>
+		            {{game.PlayerOne}}
+		            <br/>
+		            {{game.PlayerOnesMove}}
+		            <br/>
+		            {{game.PlayerTwo}}
+		            <br/>
+		            {{game.PlayerTwosMove}}
+		            <br/>
+				</p>
+	      	{{/each}}
+	      	<button type="button" class="search_game btn btn-primary">Primary</button>
+    	</div>
+    </div>
+</template>

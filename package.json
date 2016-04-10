@@ -1,0 +1,19 @@
+{
+  "name": "mqwebsite",
+  "version": "1.0.0",
+  "description": "MQWebsite",
+  "main": "main.js",
+  "scripts": {
+    "meteor": "MONGO_URL=mongodb://127.0.0.1:27017/mqwebsite meteor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mquettan3/mqwebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mquettan3/mqwebsite/issues"
+  },
+  "homepage": "https://github.com/mquettan3/mqwebsite"
+}
