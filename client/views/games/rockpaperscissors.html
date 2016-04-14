@@ -2,20 +2,57 @@
     <!-- Root -->
     <div class="row">
     	<div class="col-lg-12">
-    		<h5>Games</h5>
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+				  Login
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">Login</h4>
+				      </div>
+				      <div class="modal-body text-center">
+								<!-- <a id="googleLogin" class="circle google" href="">
+									<p>
+										Login With: <i class="fa fa-google-plus fa-fw"></i>
+									</p>
+								</a> -->
+			          <button data-social-login="loginWithGoogle" type="button" class="btn">
+			            <i class="fa fa-google"></i> Sign in with Google
+			          </button>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<!-- Current Game -->
+    		<h3>Username: {{current_userid}} {{userIdentity}}</h3>
+				<br/>
+				<br/>
+    		<h3>Games</h3>
     		{{#each game in current_game}}
 				<p>
-		            {{game.PlayerOne}}
+		            Game ID: {{game._id}}
 		            <br/>
-		            {{game.PlayerOnesMove}}
+		            Player One: {{game.PlayerOne}}
 		            <br/>
-		            {{game.PlayerTwo}}
+		            Player One's Move: {{game.PlayerOnesMove}}
 		            <br/>
-		            {{game.PlayerTwosMove}}
+		            Player Two: {{game.PlayerTwo}}
+		            <br/>
+		            Player Two's Move: {{game.PlayerTwosMove}}
 		            <br/>
 				</p>
 	      	{{/each}}
-	      	<button type="button" class="search_game btn btn-primary">Primary</button>
+	      	<button type="button" class="search_game btn btn-primary">Join Game</button>
     	</div>
     </div>
 </template>

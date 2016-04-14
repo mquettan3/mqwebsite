@@ -34,3 +34,9 @@ standard-minifier-css
 standard-minifier-js
 aldeed:simple-schema
 aldeed:collection2
+service-configuration
+accounts-google
+accounts-oauth
+oauth
+oauth2
+google

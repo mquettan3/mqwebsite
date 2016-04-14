@@ -1,15 +1,15 @@
 RockPaperScissors = new Mongo.Collection( 'rockpaperscissors' );
 
 RockPaperScissors.allow({
-  insert: () => false,
-  update: () => false,
-  remove: () => false
-});
-
-RockPaperScissors.deny({
   insert: () => true,
   update: () => true,
   remove: () => true
+});
+
+RockPaperScissors.deny({
+  insert: () => false,
+  update: () => false,
+  remove: () => false
 });
 
 let RockPaperScissorsSchema = new SimpleSchema({
@@ -19,15 +19,18 @@ let RockPaperScissorsSchema = new SimpleSchema({
   },
   'PlayerOnesMove': {
     type: String,
-    label: 'Player Ones selection'
+    label: 'Player Ones selection',
+    optional: true
   },
   'PlayerTwo': {
     type: String,
-    label: 'Name of Player Two'
+    label: 'Name of Player Two',
+    optional: true
   },
   'PlayerTwosMove': {
     type: String,
-    label: 'Player Twos selection'
+    label: 'Player Twos selection',
+    optional: true
   }
 });
 

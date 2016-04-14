@@ -1,6 +1,6 @@
 FlowRouter.notFound = {
     action() {
-        FlowRouter.render('notFound');
+        BlazeLayout.render('notFound');
     }
 };
 
