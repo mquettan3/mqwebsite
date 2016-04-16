@@ -10,10 +10,3 @@ publicRoutes.route('/', {
         BlazeLayout.render('landingLayout');
     }
 });
-
-publicRoutes.route('/game', {
-    name: 'gaming',
-    action() {
-        BlazeLayout.render('gamingLayout', {game: 'rockPaperScissors'});
-    }
-});

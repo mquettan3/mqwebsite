@@ -15,23 +15,52 @@ Meteor.methods({
             text: text
         });
     },
-    searchOpenGame: function (currentUser) {
+    joinGame: function (currentUser) {
         //Debug Purposes - Remove all entries
-        RockPaperScissors.remove({});
+        // RockPaperScissors.remove({});
+        var gameId = 0;
 
-        //Look for a game with only 1 player.
-        var OpenGame = RockPaperScissors.find({PlayerTwo: undefined});
-        if(OpenGame.count() > 0) {
-            //If one exists, join it.
-            RockPaperScissors.update({PlayerTwo: undefined}, {$set: {PlayerTwo: currentUser}})
+        var CurrentGame = RockPaperScissors.find({$or: [{PlayerOne: this.userId}, {PlayerTwo: this.userId}]})
+        if(CurrentGame.count() > 0) {
+            //If you're already in a game, don't create another.
+
+            //Return the most recent game ID
+            var GameArray = CurrentGame.fetch();
+            gameId = GameArray[GameArray.length - 1]._id;
         } else {
-            //Else, create a New game
-            RockPaperScissors.insert({
-                PlayerOne: currentUser,
-                PlayerOnesMove: undefined,
-                PlayerTwo: undefined,
-                PlayerTwosMove: undefined
-            });
+            //Look for a game with only 1 player.
+            var OpenGame = RockPaperScissors.find({PlayerTwo: undefined});
+            if(OpenGame.count() > 0) {
+                //Return the most recent game ID
+                var GameArray = OpenGame.fetch();
+                gameId = GameArray[GameArray.length - 1]._id;
+
+                //If one exists, join it.
+                RockPaperScissors.update(GameArray[GameArray.length - 1]._id, {$set: {PlayerTwo: currentUser}})
+            } else {
+                //Else, create a New game
+                gameId = RockPaperScissors.insert({
+                    PlayerOne: currentUser,
+                    PlayerOnesMove: undefined,
+                    PlayerTwo: undefined,
+                    PlayerTwosMove: undefined
+                });
+            }
         }
+        console.log(gameId);
+        return gameId;
+    },
+    playMove: function (CurrentGame, player, move) {
+        //
+        if(player === "One") {
+            //Insert Player's move into the database
+            RockPaperScissors.update({_id: CurrentGame}, {$set: {PlayerOnesMove: move}});
+        } else if (player === "Two") {
+            //Insert Player's move into the database
+            RockPaperScissors.update({_id: CurrentGame}, {$set: {PlayerTwosMove: move}});
+        }
+
+        //Update the Player's stats
+        // Meteor.users.update({_id: this.userId)}, {$push: {MovesPlayed: move}});
     }
 });

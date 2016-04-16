@@ -1,6 +1,6 @@
 Meteor.publish( 'current_game', function() {
   return [
-    RockPaperScissors.find()
+    RockPaperScissors.find({$or: [{PlayerOne: this.userId}, {PlayerTwo: this.userId}]})
   ];
 });
 

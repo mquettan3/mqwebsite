@@ -9,11 +9,18 @@ Template.rockPaperScissors.destroyed = function(){
 };
 
 Template.rockPaperScissors.events({
-	'click .search_game': function ( event ) {
+	'click .joinGame': function ( event ) {
     //Synchronously send my current move
-    Meteor.call('searchOpenGame',
-      //Meteor.userId(),  //Current User
-      "Darkblue"
+    Meteor.call('joinGame',
+      Meteor.userId(),  //Current User
+      function (error, result) {
+        if (error) {
+          console.log(error.message);
+        } else {
+          //Route to the game!
+          FlowRouter.go("/game/rockPaperScissors/".concat(result));
+        }
+      }
     );
 	},
   'click [data-social-login]' ( event, template ) {
@@ -28,7 +35,10 @@ Template.rockPaperScissors.events({
 
   Meteor[ service ]( options, ( error ) => {
     if ( error ) {
-      Bert.alert( error.message, 'danger' );
+      Bert.alert( error.message, 'danger', 'growl-top-left' );
+    } else {
+      Bert.alert( 'Login Successful!', 'success', 'growl-top-left' );
+      $('#myModal').modal('hide');
     }
   });
 }
