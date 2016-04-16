@@ -9,9 +9,9 @@ const gamingRoutes = FlowRouter.group({
 });
 
 gamingRoutes.route('/', {
-    name: 'pre_login',
+    name: 'gameHome',
     action() {
-        BlazeLayout.render('gamingLayout', {game: 'rockPaperScissors'});
+        BlazeLayout.render('gamingLayout', {game: 'gameHome'});
     }
 });
 

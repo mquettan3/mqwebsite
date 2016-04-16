@@ -1,0 +1,27 @@
+<template name="rockPaperScissors">
+    <!-- Root -->
+    <div class="row">
+    	<div class="col-lg-12">
+		    <!-- Current Game -->
+    		<h3>Username: {{current_userid}} {{userIdentity}}</h3>
+				<br/>
+				<br/>
+    		<h3>Games</h3>
+    		{{#each game in current_game}}
+				<p>
+		            Game ID: {{game._id}}
+		            <br/>
+		            Player One: {{game.PlayerOne}}
+		            <br/>
+		            Player One's Move: {{game.PlayerOnesMove}}
+		            <br/>
+		            Player Two: {{game.PlayerTwo}}
+		            <br/>
+		            Player Two's Move: {{game.PlayerTwosMove}}
+		            <br/>
+				</p>
+	      	{{/each}}
+	      	<button type="button" class="joinGame btn btn-primary">Join Game</button>
+    	</div>
+    </div>
+</template>
