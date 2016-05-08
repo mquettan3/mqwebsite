@@ -10,7 +10,7 @@ Template.gameHome.destroyed = function(){
 
 Template.gameHome.events({
 	'click .joinGame': function ( event ) {
-    //Synchronously send my current move
+    //Asynchronously send my current move
     Meteor.call('joinGame',
       Meteor.userId(),  //Current User
       function (error, result) {

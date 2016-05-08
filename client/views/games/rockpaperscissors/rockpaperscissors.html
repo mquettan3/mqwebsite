@@ -6,22 +6,31 @@
     		<h3>Username: {{current_userid}} {{userIdentity}}</h3>
 				<br/>
 				<br/>
-    		<h3>Games</h3>
-    		{{#each game in current_game}}
-				<p>
-		            Game ID: {{game._id}}
-		            <br/>
-		            Player One: {{game.PlayerOne}}
-		            <br/>
-		            Player One's Move: {{game.PlayerOnesMove}}
-		            <br/>
-		            Player Two: {{game.PlayerTwo}}
-		            <br/>
-		            Player Two's Move: {{game.PlayerTwosMove}}
-		            <br/>
-				</p>
-	      	{{/each}}
-	      	<button type="button" class="joinGame btn btn-primary">Join Game</button>
+            <h3>Game: </h3>
+            <p>
+                Game ID: {{current_game._id}}
+                <br/>
+                Player One: {{current_game.PlayerOne}}
+                <br/>
+                Player One's Move: {{current_game.PlayerOnesMove}}
+                <br/>
+                Player Two: {{current_game.PlayerTwo}}
+                <br/>
+                Player Two's Move: {{current_game.PlayerTwosMove}}
+                <br/>
+            </p>
+            <form role="form" class="move_selection">
+                <div class="radio">
+                    <label><input type="radio" name="selected_move" value="rock">Rock</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="selected_move" value="paper">Paper</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="selected_move" value="scissors">Scissors</label>
+                </div>
+                <input id="play_move" type="submit" value="Play Move" class="margin-clear submit-button btn btn-primary">
+            </form>
     	</div>
     </div>
 </template>

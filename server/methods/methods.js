@@ -47,17 +47,17 @@ Meteor.methods({
                 });
             }
         }
-        console.log(gameId);
         return gameId;
     },
-    playMove: function (CurrentGame, player, move) {
-        //
-        if(player === "One") {
-            //Insert Player's move into the database
+    playMove: function (CurrentGame, move) {
+        if(RockPaperScissors.find({$and: [{_id: CurrentGame}, {PlayerOne: this.userId}]}).count() > 0) {
+            //Insert move as player one's move into the database
             RockPaperScissors.update({_id: CurrentGame}, {$set: {PlayerOnesMove: move}});
-        } else if (player === "Two") {
-            //Insert Player's move into the database
+        } else if (RockPaperScissors.find({$and: [{_id: CurrentGame}, {PlayerTwo: this.userId}]}).count() > 0) {
+            //Insert move as player two's move into the database
             RockPaperScissors.update({_id: CurrentGame}, {$set: {PlayerTwosMove: move}});
+        } else {
+            console.log("Player not found!");
         }
 
         //Update the Player's stats

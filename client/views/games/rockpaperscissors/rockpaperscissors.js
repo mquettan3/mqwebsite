@@ -1,7 +1,6 @@
 Template.rockPaperScissors.rendered = function(){
   let template = Template.instance();
-  template.subscribe( 'current_game' );
-  template.subscribe( 'user' );
+  template.subscribe( 'current_game', FlowRouter.getParam("_id") );
 }
 
 Template.rockPaperScissors.destroyed = function(){
@@ -9,46 +8,26 @@ Template.rockPaperScissors.destroyed = function(){
 };
 
 Template.rockPaperScissors.events({
-	'click .joinGame': function ( event ) {
+  'submit .move_selection': function(event) {
+    event.preventDefault();
+    console.log("Playing ".concat(event.target.selected_move.value))
     //Synchronously send my current move
-    Meteor.call('joinGame',
-      Meteor.userId(),  //Current User
-      function (error, result) {
-        if (error) {
-          console.log(error.message);
-        } else {
-          //Route to the game!
-          FlowRouter.go("/game/rockPaperScissors/".concat(result));
-        }
-      }
+    Meteor.call('playMove',
+      FlowRouter.getParam("_id"), //Game Id
+      event.target.selected_move.value //Move
     );
-	},
-  'click [data-social-login]' ( event, template ) {
-  const service = event.target.getAttribute( 'data-social-login' ),
-        options = {
-          requestPermissions: [ 'email' ]
-        };
-
-  if ( service === 'loginWithTwitter' ) {
-    delete options.requestPermissions;
   }
-
-  Meteor[ service ]( options, ( error ) => {
-    if ( error ) {
-      Bert.alert( error.message, 'danger', 'growl-top-left' );
-    } else {
-      Bert.alert( 'Login Successful!', 'success', 'growl-top-left' );
-      $('#myModal').modal('hide');
-    }
-  });
-}
 });
 
 Template.rockPaperScissors.helpers({
   current_game: function() {
     let current_game = RockPaperScissors.find();
-    if ( current_game ) {
-      return current_game;
+    if ( current_game.count() ) {
+      if (current_game.count() > 1) {
+        console.log("Error: ".concat(current_game.count()).concat(" Games Found!"));
+      } else {
+        return current_game.fetch()[0];
+      }
     }
   },
   current_userid: function() {

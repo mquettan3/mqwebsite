@@ -18,7 +18,6 @@ gamingRoutes.route('/', {
 gamingRoutes.route('/rockPaperScissors/:_id', {
     name: 'playing_rockpaperscissors',
     action: function(params) {
-        console.log(params._id)
         BlazeLayout.render('gamingLayout', {game: 'rockPaperScissors'});
     }
 });
