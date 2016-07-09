@@ -24,14 +24,14 @@ Meteor.methods({
         if(CurrentGame.count() > 0) {
             //If you're already in a game, don't create another.
 
-            //Return the most recent game ID
+            //Return the most recent game ID that you are currently in
             var GameArray = CurrentGame.fetch();
             gameId = GameArray[GameArray.length - 1]._id;
         } else {
             //Look for a game with only 1 player.
             var OpenGame = RockPaperScissors.find({PlayerTwo: undefined});
             if(OpenGame.count() > 0) {
-                //Return the most recent game ID
+                //If an empty game exists.  Return the most recent game ID.
                 var GameArray = OpenGame.fetch();
                 gameId = GameArray[GameArray.length - 1]._id;
 
@@ -51,16 +51,42 @@ Meteor.methods({
     },
     playMove: function (CurrentGame, move) {
         if(RockPaperScissors.find({$and: [{_id: CurrentGame}, {PlayerOne: this.userId}]}).count() > 0) {
-            //Insert move as player one's move into the database
-            RockPaperScissors.update({_id: CurrentGame}, {$set: {PlayerOnesMove: move}});
+            //Player one is requesting
+
+            //Has Player one already moved?
+            if(RockPaperScissors.find({PlayerOnesMove: undefined})) {
+                //Player one has already moved.  Return -1
+                console.log("Player one has already moved!");
+                return -1;
+            } else {
+                //Insert move as player one's move into the database
+                RockPaperScissors.update({_id: CurrentGame}, {$set: {PlayerOnesMove: move}});
+                return 0;
+            }
         } else if (RockPaperScissors.find({$and: [{_id: CurrentGame}, {PlayerTwo: this.userId}]}).count() > 0) {
-            //Insert move as player two's move into the database
-            RockPaperScissors.update({_id: CurrentGame}, {$set: {PlayerTwosMove: move}});
+            //Player two is requesting
+            
+            //Has Player two already moved?
+            if(RockPaperScissors.find({PlayerTwosMove: undefined})) {
+                //Player two has already moved.  Return -1
+                console.log("Player two has already moved!");
+                return -1;
+            } else {
+                //Insert move as player two's move into the database
+                RockPaperScissors.update({_id: CurrentGame}, {$set: {PlayerTwosMove: move}});
+                return 0;
+            }
         } else {
             console.log("Player not found!");
         }
 
         //Update the Player's stats
-        // Meteor.users.update({_id: this.userId)}, {$push: {MovesPlayed: move}});
+        //Meteor.users.update({_id: this.userId)}, {$push: {MovesPlayed: move}});
+        
+        //Have both players played?
+        if(RockPaperScissors.find({$and: [{_id: CurrentGame}, {$not: [{ PlayerTwosMove: undefined}, { PlayerOnesMove: undefined}]}]}).count() > 0) {
+            //Both players have played
+            console.log("Both Players have played!");
+        }
     }
 });
